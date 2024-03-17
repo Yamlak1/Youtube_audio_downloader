@@ -1,11 +1,12 @@
 const {Telegraf} = require ('telegraf');
 const ytdl = require('ytdl-core');
+require('dotenv').config();
 
-const token= '7161099413:AAEfsoi1406BZBSHOJLhfR77cDbOqNHLHQM'
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new Telegraf(token);
 
 bot.start((ctx)=>{
-    ctx.reply('Youtube Downloder')
+    ctx.reply('Youtube Music Downloder')
 })
 
 bot.command('downloadAudio', async(ctx)=>{
