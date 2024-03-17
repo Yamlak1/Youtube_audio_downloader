@@ -8,10 +8,10 @@ bot.start((ctx)=>{
     ctx.reply('Youtube Downloder')
 })
 
-bot.command('downloadMovie', async(ctx)=>{
+bot.command('downloadAudio', async(ctx)=>{
     const messageText= ctx.message.text;
 
-    const youtubeLink = messageText.replace('/downloadMovie','').trim()
+    const youtubeLink = messageText.replace('/downloadAudio','').trim()
     console.log(youtubeLink)
 
     if (ytdl.validateURL(youtubeLink)){
